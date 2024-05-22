@@ -84,10 +84,10 @@ def main(args):
     wordfreq1 = word_frequency_dict(args.tsv1)
     wordfreq2 = word_frequency_dict(args.tsv2)
 
-    total_tokens_kjv = sum(wordfreq1.values())
-    total_tokens_yahoo = sum(wordfreq2.values())
+    total_tokens_1 = sum(wordfreq1.values())
+    total_tokens_2 = sum(wordfreq2.values())
 
-    Log_ORatio = compute_ratio(wordfreq1, wordfreq2, total_tokens_kjv, total_tokens_yahoo)
+    Log_ORatio = compute_ratio(wordfreq1, wordfreq2, total_tokens_1, total_tokens_2)
 
     sorted_ratio = sorted(Log_ORatio.items(), key=lambda x: x[1])       
 
